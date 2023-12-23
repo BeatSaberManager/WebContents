@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+        rel="stylesheet"
+        media="(prefers-color-scheme:dark)"
+        href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/themes/dark.css"
+        onload="document.documentElement.classList.add('sl-theme-dark');"
+    />
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    Test
+    <div class="nav">
+        <div class="nav_scroll">
+            <sl-button class="nav_btn" id="installed">Installed Songs</sl-button>
+            <sl-button class="nav_btn" id="install">Download Songs</sl-button>
+            <sl-button class="nav_btn" id="playlist">Manage Playlists</sl-button>
+        </div>
+    </div>
+
+    <div class="installed_songs" id="installed_songs">
+        <div class="installed_songs_search">
+            <div class="installed_songs_search_bar">
+                <sl-input class="search_bar" placeholder="Search" id="s_l_search"></sl-input>
+                <sl-progress-bar class="progress" id="progress" value="50" style="--height: 6px;"></sl-progress-bar>
+            </div>
+        </div>
+        <div class="installed_songs_list" id="i_s_list">
+            
+        </div>
+        <div class="player">
+            <audio class="audio" id="audio" controls>
+                <source src="" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <div class="download_songs" id="download_songs">
+        download
+    </div>
+
+    <div class="manage_playlists" id="manage_playlists">
+        manage
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/components/input/input.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/components/card/card.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/components/button/button.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/components/progress-bar/progress-bar.js"></script>
+    <script src="datastorage.js"></script>
+    <script src="songlist.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+}
+
+.nav_scroll {
+    width: 100%;
+    height: 60px;
+    overflow-x: scroll;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_btn {
+    margin: 10px;
+}
+
+.installed_songs {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.installed_songs_search {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #1a1a1a;
+    z-index: 1;
+}
+
+.installed_songs_search_bar {
+    width: 90%;
+    margin-top: 10px;
+    displa: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress {
+    margin-top: 5px;
+}
+
+.installed_songs_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.card-overview {
+    margin: 10px;
+}
+
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+.audio {
+    width: 90%;
+}
+
+.download_songs {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manage_playlists {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
