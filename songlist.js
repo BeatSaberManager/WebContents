@@ -29,7 +29,7 @@ async function loadSongs() {
     // cleat the list
     listDiv.innerHTML = "";
     for (const song of songs) {
-        console.log(song);
+        console.log(JSON.stringify(song));
         let name = song.name;
         let hash = song.hash;
 
