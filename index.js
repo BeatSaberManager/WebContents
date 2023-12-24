@@ -27,7 +27,7 @@ playlistButton.addEventListener("click", () => {
 async function init() {
     let songs = await fetch("http://localhost:50004/api/songs")
 
-
+    loadSongs();
 }
 
 init();
