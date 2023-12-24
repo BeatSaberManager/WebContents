@@ -31,7 +31,7 @@ async function init() {
     let fsongs = await fetch(url);
 
 
-    let json = await JSON.parse(await fsongs.text());
+    let json = await JSON.parse(await fsongs.json());
     songs = json;
 
     loadSongs();
