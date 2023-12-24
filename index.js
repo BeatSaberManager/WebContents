@@ -25,9 +25,14 @@ playlistButton.addEventListener("click", () => {
 });
 
 async function init() {
-    let fsongs = await fetch("http://localhost:50004/api/songs")
+    let url = "http://localhost:50004/api/songs";
+
+    // fetch the json from the server and log it every 1% progress
+    let fsongs = await fetch(url);
+
+
     let json = await JSON.parse(await fsongs.text());
-    songs = json.songs;
+    songs = json;
 
     loadSongs();
 }
