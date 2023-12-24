@@ -42,4 +42,4 @@ async function init() {
     loadSongs();
 }
 
-init();
+document.addEventListener("DOMContentLoaded", init);

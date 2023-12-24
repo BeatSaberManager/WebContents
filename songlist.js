@@ -54,8 +54,6 @@ async function loadSongs() {
     progress.value = 100;
 }
 
-loadSongs();
-
 async function loadSongsWithKeyword(keyword) {
     // only list the songs which title contains the keyword
     // if keyword is empty, list all 
