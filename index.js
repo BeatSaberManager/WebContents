@@ -25,14 +25,19 @@ playlistButton.addEventListener("click", () => {
 });
 
 async function init() {
-    let url = "http://localhost:50004/api/songs";
+    let baseUrl = document.location.origin;
 
-    // fetch the json from the server and log it every 1% progress
-    let fsongs = await fetch(url);
+    let url = baseUrl + "/api/songs";
 
-
-    let json = await JSON.parse(await fsongs.json());
-    songs = json;
+    // fetch without cors
+    let fsongs = await fetch(url, {
+        mode: "no-cors",
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json"
+        }
+    });
+    songs = await fsongs.json();
 
     loadSongs();
 }
